@@ -4,7 +4,7 @@
 動作するバージョン: **1.16~**
 
 ## DL
-[こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/1.0)からAssets -> ScoreDamage.zip をDLしてください
+[こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/1.0)からAssets -> MCCMD-ScoreDamage.zip をDLしてください
 
 ## 使い方
 

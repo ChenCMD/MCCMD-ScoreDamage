@@ -56,6 +56,7 @@ execute as 対象 run function score_damage:api/attack.no_particle
 <A id="3"></a>
 ### 参照するエンチャントを爆発耐性,火炎耐性,独自のもの 等にしたい / エンチャントを無視するダメージを与えたい
 与えたいダメージを設定する時にこれも設定してね
+
 EPFの決め方は[ここ](https://minecraft.gamepedia.com/Armor#Enchantments)参照してね
 EPFを0にするとエンチャントを無視するダメージを与えられるよ
 ```mcfunction

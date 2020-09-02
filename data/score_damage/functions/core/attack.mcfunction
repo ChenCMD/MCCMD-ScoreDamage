@@ -20,9 +20,5 @@
     function score_damage:core/get_status
 # 与えるダメージの計算
     function score_damage:core/calc
-    tellraw @a [{"text":"score: "},{"score":{"objective":"ScoreDamageCore","name":"$Damage"}}]
 # Mobに適用
     function score_damage:core/health_subtract
-# リセット
-    scoreboard players reset $Damage ScoreDamage
-    scoreboard players reset $EPF ScoreDamage

@@ -1,5 +1,5 @@
 # MCCMD-ScoreDamage
-防御を貫通しないダメージを与えることのできるライブラリ
+防御を貫通しないダメージをEntityに与えることのできるライブラリ
 
 対応バージョン: **1.16~**
 
@@ -37,6 +37,7 @@ execute as 対象 run function score_damage:api/attack
 * protectionエンチャント
 * 耐性エフェクト
 
+---
 <A id="2"></a>
 ### ダメージを与えた時のパーティクルを無くしたい
 ```mcfunction
@@ -51,7 +52,7 @@ execute as 対象 run function score_damage:api/attack.no_particle
 * protectionエンチャント
 * 耐性エフェクト
 
-
+---
 <A id="3"></a>
 ### 参照するエンチャントを爆発耐性,火炎耐性,独自のもの 等にしたい / エンチャントを無視するダメージを与えたい
 与えたいダメージを設定する時にこれも設定してね
@@ -62,7 +63,7 @@ EPFを0にするとエンチャントを無視するダメージを与えられ�
 scoreboard players set $EPF ScoreDamage n
 ```
 
-
+---
 <A id="4"></a>
 ### 防具効果を無視するダメージを与えたい
 ```mcfunction
@@ -75,7 +76,7 @@ execute as 対象 run function score_damage:api/attack.bypass_resistance
 * protectionエンチャント
 * 耐性エフェクト
 
-
+---
 <A id="5"></a>
 ### 耐性エフェクト効果を無視するダメージを与えたい
 ```mcfunction
@@ -89,7 +90,7 @@ execute as 対象 run function score_damage:api/attack.bypass_resistance
 * generic.armor_toughness
 * protectionエンチャント
 
-
+---
 <A id="6"></a>
 ### 自由に無視する要素を決めてダメージを与えたい
 ```mcfunction
@@ -106,12 +107,14 @@ scoreboard players set $BypassResistance ScoreDamage 0 or 1
 execute as 対象 run function score_damage:api/attack.custom
 ```
 
+---
 <A id="w"></a>
 ## 注意点
 * $Damageに214747よりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
 * 実行者はplayer以外かつHealthを持つEntityを持つEntityである必要があるよ
 * $EPFは値が未指定、もしくは-1以下の時 EntiyのProtectionを参照するよ
 
+---
 <A id="r"></a>
 ## 推奨利用環境
 [Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)(通称DHP)を導入した[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)での使用

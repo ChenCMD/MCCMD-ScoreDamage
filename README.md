@@ -84,3 +84,12 @@ scoreboard players set $BypassResistance ScoreDamage 0 or 1
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack.custom
 ```
+
+## 注意点
+* 実行者はplayer以外かつHealthを持つEntityを持つEntityである必要があるよ
+* $EPFは値が未指定、もしくは-1以下の時 EntiyのProtectionを参照するよ
+
+## 推奨利用環境
+[Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)(通称DHP)を導入した[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)での使用
+
+DHPを導入した環境の場合, 上記のfunction名にカーソルを合わせると必要な引数が確認できます。

@@ -10,7 +10,7 @@
 
 ### とりあえず防御非貫通のダメージを与えたい
 ```mcfunction
-# 与えたいダメージを設定
+# 与えたいダメージ100倍で設定
 scoreboard players set $Damage ScoreDamage n
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack
@@ -23,7 +23,7 @@ execute as 対象 run function score_damage:api/attack
 
 ### ダメージを与えた時のパーティクルを無くしたい
 ```mcfunction
-# 与えたいダメージを設定
+# 与えたいダメージ100倍で設定
 scoreboard players set $Damage ScoreDamage n
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack.no_particle
@@ -47,7 +47,7 @@ scoreboard players set $EPF ScoreDamage n
 
 ### 防具効果を無視するダメージを与えたい
 ```mcfunction
-# 与えたいダメージを設定
+# 与えたいダメージ100倍で設定
 scoreboard players set $Damage ScoreDamage n
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack.bypass_resistance
@@ -72,7 +72,7 @@ execute as 対象 run function score_damage:api/attack.bypass_resistance
 
 ### 自由に無視する要素を決めてダメージを与えたい
 ```mcfunction
-# 与えたいダメージを設定
+# 与えたいダメージ100倍で設定
 scoreboard players set $Damage ScoreDamage n
 # ダメージを与えた際のパーティクルを表示するか否か
 scoreboard players set $DisableParticle ScoreDamage 0 or 1
@@ -86,6 +86,7 @@ execute as 対象 run function score_damage:api/attack.custom
 ```
 
 ## 注意点
+* $Damageに214747よりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
 * 実行者はplayer以外かつHealthを持つEntityを持つEntityである必要があるよ
 * $EPFは値が未指定、もしくは-1以下の時 EntiyのProtectionを参照するよ
 

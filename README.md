@@ -42,9 +42,9 @@ execute as 対象 run function score_damage:api/attack
 | -: | :- |
 | Damage | 与えたいダメージ (小数点2桁まで有効) |
 | EPF | 軽減効果のある[エンチャントプロテクションファクター](https://minecraft.gamepedia.com/Armor#Enchantments)の合計値 <br> 0以上の値が設定されている場合はその値を, 設定されていない場合はProtectionを自動的に参照します。|
-| BypassArmor | 防具による軽減を無視するか否か |
-| BypassResistance | 耐性エフェクトによる軽減を無視するか否か |
-| DisableParticle | ダメージを与えた際にパーティクルを出すか否か |
+| BypassArmor | 防具による軽減を無視するか否か <br> default: false |
+| BypassResistance | 耐性エフェクトによる軽減を無視するか否か <br> default:false |
+| DisableParticle | ダメージを与えた際にパーティクルを出すか否か <br> default:false |
 
 ```mcfunction
 # 引数を設定

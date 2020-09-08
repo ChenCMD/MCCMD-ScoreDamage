@@ -48,6 +48,7 @@ execute as 対象 run function score_damage:api/attack
 | DisableParticle | ダメージを与えた際にパーティクルを出すか否か |
 
 ```mcfunction
+# 引数を設定
 data merge storage score_damage: {Damage:10.00f,EPF:0,BypassArmor:true/false,BypassResistance:true/false,DisableParticle:true/false}
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack

@@ -4,6 +4,7 @@
 対応バージョン: **1.16~**
 
 1. [DL](#howToDL)
+1. [依存ライブラリについて](#dependency)
 1. [要注意事項](#precautions)
 1. [使い方](#howToUse)
     1. [とりあえず防御非貫通のダメージを与えたい](#1)
@@ -16,9 +17,13 @@
 [こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/1.0)からAssets -> MCCMD-ScoreDamage.zip をDLしてください
 
 ---
+<a id="dependency"></a>
+## 依存ライブラリについて
+このライブラリでプレイヤーにダメージを与える場合、赤石愛氏作成の[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を導入する必要があります。
+
+---
 <a id="precautions"></a>
 ## 要注意事項
-* このライブラリでプレイヤーにダメージを与える場合、赤石愛氏作成の[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を使用する必要があります。
 * Damageに2147.47fよりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
 * 実行者はHealthを持つEntityを持つEntityである必要があるよ
 

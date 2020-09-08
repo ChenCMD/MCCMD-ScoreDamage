@@ -2,21 +2,27 @@
 #
 # 実行者のエンティティにダメージを与えます。
 #
-# 実行者はplayer以外かつHealthを持つEntityを持つEntityである必要があります。
+# 実行者はHealthを持つEntityである必要があります。
 #
-# @input _score_
-#   **$Damage ScoreDamage**
-#       与えるダメージを100倍し入力
-#   **$EPF ScoreDamage**
+# @input **storage score_damage:**
+#   **Damage**: float
+#       与えるダメージを入力
+#   **EPF**: int
 #       軽減効果のある[エンチャントプロテクションファクター](https://minecraft.gamepedia.com/Armor#Enchantments)の合計値
-#
-# @! $EPFは値が未指定、もしくは-1以下の時 EntiyのProtectionを参照します
-#
-# @public
+#   **DisableParticle**: boolean
+#       パーティクルを表示するか否か, bool値
+#   **BypassArmor**: boolean
+#       防御力/防具強度を無視するか否か, bool値
+#   **BypassResistance**: boolean
+#       耐性エフェクトを無視するか否か, bool値
+# @context EPFが-1以下の時 EntityのProtectionを参照します
+# @api
 
-# フラグの設定
-    scoreboard players set $DisableParticle ScoreDamageCore 0
-    scoreboard players set $BypassArmor ScoreDamageCore 0
-    scoreboard players set $BypassResistance ScoreDamageCore 0
-# Entityがプレイヤー以外かつHealthを持つEntityであれば実行
-    execute if entity @s[team=!null,type=!player] run function score_damage:core/attack
+#> Temp
+# @internal
+    #declare team Null
+
+# 引数チェック
+    execute unless data storage score_damage: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at score_damage:api/attack","color":"white"}]
+# Healthを持つEntityであれば実行
+    execute if data storage score_damage: Damage if entity @s[team=!Null] run function score_damage:core/attack

@@ -6,7 +6,7 @@
 
 #> 詳細はfunctionのホバー情報を確認してください
 # @public
-    scoreboard objectives add ScoreDamage dummy
+    #declare storage score_damage:
 
 #> Private
 # @internal

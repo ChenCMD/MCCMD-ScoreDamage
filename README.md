@@ -5,10 +5,10 @@
 
 1. [DL](#howToDL)
 1. [依存ライブラリについて](#dependency)
-1. [要注意事項](#precautions)
 1. [使い方](#howToUse)
     1. [とりあえず防御非貫通のダメージを与えたい](#1)
     1. [細かく条件を決めてダメージを与えたい](#2)
+1. [要注意事項](#precautions)
 1. [推奨利用環境](#recommended)
 
 ---
@@ -20,12 +20,6 @@
 <a id="dependency"></a>
 ## 依存ライブラリについて
 このライブラリでプレイヤーにダメージを与える場合、赤石愛氏作成の[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を導入する必要があります。
-
----
-<a id="precautions"></a>
-## 要注意事項
-* Damageに2147.47fよりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
-* 実行者はHealthを持つEntityを持つEntityである必要があるよ
 
 ---
 <a id="howToUse"></a>
@@ -58,6 +52,12 @@ data merge storage score_damage: {Damage:10.00f,EPF:0,BypassArmor:true/false,Byp
 # 対象を実行者にしてfunctionを実行
 execute as 対象 run function score_damage:api/attack
 ```
+
+---
+<a id="precautions"></a>
+## 要注意事項
+* Damageに2147.47fよりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
+* 実行者はHealthを持つEntityを持つEntityである必要があるよ
 
 ---
 <A id="recommended"></a>

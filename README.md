@@ -14,7 +14,7 @@
 ---
 <a id="howToDL"></a>
 ## DL
-[こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/1.0)からAssets -> MCCMD-ScoreDamage.zip をDLしてください
+[こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/2.0)からAssets -> MCCMD-ScoreDamage.zip をDLしてください
 
 ---
 <a id="dependency"></a>

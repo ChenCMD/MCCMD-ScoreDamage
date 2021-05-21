@@ -11,11 +11,15 @@
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage ScoreDamageCore < $Health ScoreDamageCore
 # Health減算
-    scoreboard players operation $Health ScoreDamageCore -= $Damage ScoreDamageCore
+    scoreboard players operation $SubtractedHealth ScoreDamageCore = $Health ScoreDamageCore
+    scoreboard players operation $SubtractedHealth ScoreDamageCore -= $Damage ScoreDamageCore
 # Mobへ代入
     # Player
         execute if entity @s[type=player] run scoreboard players operation $Health ScoreDamageCore /= $100 ScoreDamageCore
-        execute if entity @s[type=player] store success score $hasDependency ScoreDamageCore run scoreboard players operation @s ScoreToHealth = $Health ScoreDamageCore
+        execute if entity @s[type=player] run scoreboard players operation $SubtractedHealth ScoreDamageCore /= $100 ScoreDamageCore
+        execute if entity @s[type=player] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
+        execute if entity @s[type=player] unless score @s ScoreToHealth matches 0.. store success score $hasDependency ScoreDamageCore run scoreboard players operation @s ScoreToHealth = $Health ScoreDamageCore
+        execute if entity @s[type=player] run scoreboard players operation @s ScoreToHealth -= $Damage ScoreDamageCore
         execute if entity @s[type=player] if score $hasDependency ScoreDamageCore matches 0 run tellraw @a [{"text":"ERROR >> ","color":"red"},{"text":"ScoreToHealth","underlined":true,"color":"#4c4cff","clickEvent":{"action":"open_url","value":"https://github.com/Ai-Akaishi/ScoreToHealth"}},{"text":"が導入されていないため\nPlayerにダメージを与えることは出来ません","color":"white"}]
     # Mob
         execute if entity @s[type=!player] if score $Health ScoreDamageCore matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health ScoreDamageCore

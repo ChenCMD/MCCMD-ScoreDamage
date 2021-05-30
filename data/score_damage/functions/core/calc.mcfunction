@@ -78,4 +78,3 @@
     scoreboard players reset $defensePoints
     scoreboard players reset $toughness
     scoreboard players reset $EPF
-    scoreboard players reset $Resistance

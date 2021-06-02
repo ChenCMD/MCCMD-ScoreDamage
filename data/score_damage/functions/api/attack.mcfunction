@@ -24,5 +24,9 @@
 
 # 引数チェック
     execute unless data storage score_damage: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at score_damage:api/attack","color":"white"}]
+    execute unless data storage score_damage: EPF run data modify storage score_damage: EPF set value -1
+    execute unless data storage score_damage: DisableParticle run data modify storage score_damage: DisableParticle set value 0b
+    execute unless data storage score_damage: BypassArmor run data modify storage score_damage: BypassArmor set value 0b
+    execute unless data storage score_damage: BypassResistance run data modify storage score_damage: BypassResistance set value 0b
 # Healthを持つEntityであれば実行
     execute if data storage score_damage: Damage if entity @s[team=!Null] run function score_damage:core/attack

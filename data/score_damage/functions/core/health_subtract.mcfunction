@@ -29,7 +29,7 @@
     execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=#score_damage:undead] run effect give @s instant_health 1 31 true
     execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches ..4 run effect give @s instant_damage 1 31 true
     execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches 5.. run effect give @s instant_damage 1 0 true
-    execute if score $DisableParticle ScoreDamageCore matches 0 at @s run function score_damage:core/damage_indicator
+    execute if data storage score_damage: {DisableParticle:0b} at @s run function score_damage:core/damage_indicator
 # リセット
     scoreboard players reset $Damage ScoreDamageCore
     scoreboard players reset $Health ScoreDamageCore

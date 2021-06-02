@@ -26,8 +26,8 @@
     # Common
         execute if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
 # 演出
-    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=#score_damage:undead] run effect give @s instant_health 1 30 true
-    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches ..4 run effect give @s instant_damage 1 30 true
+    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=#score_damage:undead] run effect give @s instant_health 1 31 true
+    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches ..4 run effect give @s instant_damage 1 31 true
     execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches 5.. run effect give @s instant_damage 1 0 true
     execute if score $DisableParticle ScoreDamageCore matches 0 at @s run function score_damage:core/damage_indicator
 # リセット

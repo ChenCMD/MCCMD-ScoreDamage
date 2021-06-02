@@ -3,29 +3,25 @@
 
 対応バージョン: **1.16~**
 
-1. [DL](#howToDL)
-1. [依存ライブラリについて](#dependency)
-1. [使い方](#howToUse)
-    1. [とりあえず防御非貫通のダメージを与えたい](#1)
-    1. [細かく条件を決めてダメージを与えたい](#2)
-1. [要注意事項](#precautions)
-1. [推奨利用環境](#recommended)
+- [MCCMD-ScoreDamage](#mccmd-scoredamage)
+  - [DL](#dl)
+  - [依存ライブラリについて](#依存ライブラリについて)
+  - [使い方](#使い方)
+    - [とりあえず防御非貫通のダメージを与えたい](#とりあえず防御非貫通のダメージを与えたい)
+    - [細かく条件を決めてダメージを与えたい](#細かく条件を決めてダメージを与えたい)
+  - [要注意事項](#要注意事項)
+  - [既知のバグ](#既知のバグ)
+  - [推奨利用環境](#推奨利用環境)
 
 ---
-<a id="howToDL"></a>
 ## DL
 [こちら](https://github.com/ChenCMD/MCCMD-ScoreDamage/releases/tag/2.0)からAssets -> MCCMD-ScoreDamage.zip をDLしてください
 
----
-<a id="dependency"></a>
 ## 依存ライブラリについて
 このライブラリでプレイヤーにダメージを与える場合、赤石愛氏作成の[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を導入する必要があります。
 
----
-<a id="howToUse"></a>
 ## 使い方
 
-<A id="1"></a>
 ### とりあえず防御非貫通のダメージを与えたい
 ```mcfunction
 # 与えたいダメージを設定 (小数点2桁まで有効)
@@ -34,8 +30,6 @@ data merge storage score_damage: {Damage:10.00}
 execute as 対象 run function score_damage:api/attack
 ```
 
----
-<A id="2"></a>
 ### 細かく条件を決めてダメージを与えたい
 
 | 引数名 | 説明 |
@@ -53,14 +47,13 @@ data merge storage score_damage: {Damage:10.00f,EPF:0,BypassArmor:true/false,Byp
 execute as 対象 run function score_damage:api/attack
 ```
 
----
-<a id="precautions"></a>
 ## 要注意事項
 * Damageに2147.47fよりも大きい値を入れるとオーバーフローし、正常に計算ができないよ
 * 実行者はHealthを持つEntityを持つEntityである必要があるよ
 
----
-<A id="recommended"></a>
+## 既知のバグ
+* `generic.max_health`に1よりも小さい値を入れれないため、軽減結果が1よりも低いダメージでプレイヤーを殺すことができない
+
 ## 推奨利用環境
 [Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)(通称DHP)を導入した[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)での使用
 

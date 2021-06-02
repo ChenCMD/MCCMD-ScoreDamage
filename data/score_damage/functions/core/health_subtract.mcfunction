@@ -27,8 +27,9 @@
         execute if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
 # 演出
     execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=#score_damage:undead] run effect give @s instant_health 1 31 true
-    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches ..4 run effect give @s instant_damage 1 31 true
-    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead] if score $Resistance ScoreDamageCore matches 5.. run effect give @s instant_damage 1 0 true
+    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead,type=!player] if score $Resistance ScoreDamageCore matches ..4 run effect give @s instant_damage 1 31 true
+    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=!#score_damage:undead,type=!player] if score $Resistance ScoreDamageCore matches 5.. run effect give @s instant_damage 1 0 true
+    execute if score $SubtractedHealth ScoreDamageCore matches 1.. if entity @s[type=player] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:20b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:22b,Amplifier:100b,Duration:1,ShowParticles:0b}]}
     execute if data storage score_damage: {DisableParticle:0b} at @s run function score_damage:core/damage_indicator
 # リセット
     scoreboard players reset $Damage ScoreDamageCore

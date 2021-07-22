@@ -53,7 +53,6 @@ execute as 対象 run function score_damage:api/attack
 
 ## 既知のバグ
 * `generic.max_health`に1よりも小さい値を入れれないため、軽減結果が1よりも低いダメージでプレイヤーを殺すことができない
-* Optifineやfabric環境でプレイヤーにダメージを与えた時の挙動がおかしくなる
 
 ## 推奨利用環境
 [Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)(通称DHP)を導入した[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)での使用

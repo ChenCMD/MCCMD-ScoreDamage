@@ -5,17 +5,17 @@
 # 実行者はHealthを持つEntityである必要があります。
 #
 # @input storage score_damage:
-#   Damage: float
+#   Argument.Damage: float
 #       与えるダメージを入力
-#   EPF: int
+#   Argument.EPF: int
 #       軽減効果のある[エンチャントプロテクションファクター](https://minecraft.gamepedia.com/Armor#Enchantments)の合計値
-#   DamageType: "None" | "Fire" | "Blast" | "Projectile" | "Fall"
+#   Argument.DamageType: "None" | "Fire" | "Blast" | "Projectile" | "Fall"
 #       ダメージの種類 EPFを自動取得する場合にどのエンチャントを参照するかに関わります
-#   DisableParticle: boolean
+#   Argument.DisableParticle: boolean
 #       パーティクルを表示するか否か, bool値
-#   BypassArmor: boolean
+#   Argument.BypassArmor: boolean
 #       防御力/防具強度を無視するか否か, bool値
-#   BypassResistance: boolean
+#   Argument.BypassResistance: boolean
 #       耐性エフェクトを無視するか否か, bool値
 # @context EPFが-1以下の時 EntityのProtectionを参照します
 # @api

@@ -9,8 +9,8 @@
     #declare score_holder $Damage
     #declare score_holder $EPF
     #declare score_holder $Health
-    #declare score_holder $defensePoints
-    #declare score_holder $toughness
+    #declare score_holder $DefensePoints
+    #declare score_holder $Toughness
     #declare score_holder $Resistance
 
 # 引数データをコピー
@@ -21,3 +21,7 @@
     function score_damage:core/calc
 # Mobに適用
     function score_damage:core/health_subtract
+# リセット
+    scoreboard players reset $Damage ScoreDamageCore
+    scoreboard players reset $Health ScoreDamageCore
+    scoreboard players reset $Resistance ScoreDamageCore

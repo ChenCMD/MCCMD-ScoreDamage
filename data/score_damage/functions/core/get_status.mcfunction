@@ -7,11 +7,11 @@
 # HP
     execute store result score $Health ScoreDamageCore run data get entity @s Health 10000
 # 防御力
-    execute if data storage score_damage: {BypassArmor:0b} store result score $defensePoints ScoreDamageCore run attribute @s generic.armor get 100
-    execute if data storage score_damage: {BypassArmor:1b} run scoreboard players set $defensePoints ScoreDamageCore 0
+    execute if data storage score_damage: {BypassArmor:0b} store result score $DefensePoints ScoreDamageCore run attribute @s generic.armor get 100
+    execute if data storage score_damage: {BypassArmor:1b} run scoreboard players set $DefensePoints ScoreDamageCore 0
 # 防具強度
-    execute if data storage score_damage: {BypassArmor:0b} store result score $toughness ScoreDamageCore run attribute @s generic.armor_toughness get 100
-    execute if data storage score_damage: {BypassArmor:1b} run scoreboard players set $toughness ScoreDamageCore 0
+    execute if data storage score_damage: {BypassArmor:0b} store result score $Toughness ScoreDamageCore run attribute @s generic.armor_toughness get 100
+    execute if data storage score_damage: {BypassArmor:1b} run scoreboard players set $Toughness ScoreDamageCore 0
 # EPFが未設定または-1以下の時Protectionを参照
     execute store result score $EPF ScoreDamageCore run data get storage score_damage: EPF
     execute unless score $EPF ScoreDamageCore matches 0.. run function score_damage:core/get_default_epf/

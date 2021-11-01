@@ -18,6 +18,13 @@
     "datapack.lint.nameOfObjectives": null,
     "datapack.lint.nameOfTags": null,
     "datapack.lint.nameOfTeams": null,
+    "datapack.lint.nameOfScoreHolders": [
+        "error",
+        {
+            "label": "$Pascal",
+            "parts": "/\\$[A-Z0-9].*/"
+        }
+    ],
     "datapack.lint.nbtArrayBracketSpacing": {
         "inside": 0
     },
@@ -240,7 +247,10 @@
         "error",
         true
     ],
-    "datapack.lint.strictScoreHolderCheck": null,
+    "datapack.lint.strictScoreHolderCheck": [
+        "error",
+        true
+    ],
     "datapack.lint.strictTagCheck": null,
     "datapack.lint.strictTeamCheck": [
         "error",

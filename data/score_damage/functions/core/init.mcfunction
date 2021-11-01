@@ -12,6 +12,7 @@
 # @internal
     #declare team null
     #declare score_holder $2
+    #declare score_holder $3
     #declare score_holder $4
     #declare score_holder $5
     #declare score_holder $10
@@ -24,6 +25,7 @@
     #declare score_holder $2^19
     scoreboard objectives add ScoreDamageCore dummy
 scoreboard players set $2 ScoreDamageCore 2
+scoreboard players set $3 ScoreDamageCore 3
 scoreboard players set $4 ScoreDamageCore 4
 scoreboard players set $5 ScoreDamageCore 5
 scoreboard players set $10 ScoreDamageCore 10

@@ -1,8 +1,8 @@
-#> score_damage:core/get_player_protections
+#> score_damage:core/get_default_epf/from_player
 #
 #
 #
-# @within function score_damage:core/get_default_epf
+# @within function score_damage:core/get_default_epf/
 
 # 負荷軽減のためにstorageに入れる
     data modify storage score_damage: Inventory set from entity @s Inventory

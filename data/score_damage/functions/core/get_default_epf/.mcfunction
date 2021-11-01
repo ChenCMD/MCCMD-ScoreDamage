@@ -1,4 +1,4 @@
-#> score_damage:core/get_default_epf
+#> score_damage:core/get_default_epf/
 #
 # プロテクションのEPFを取得します
 #
@@ -10,7 +10,7 @@
 
 # 負荷軽減のためstorageに入れる
     data modify storage score_damage: Protection set value []
-    execute if entity @s[type=player] run function score_damage:core/get_player_protections
+    execute if entity @s[type=player] run function score_damage:core/get_default_epf/from_player
     execute if entity @s[type=!player] run data modify storage score_damage: Protection append from entity @s ArmorItems[].tag.Enchantments[{id:"minecraft:protection"}].lvl
 # 明示的に0に設定
     scoreboard players set $EPF ScoreDamageCore 0

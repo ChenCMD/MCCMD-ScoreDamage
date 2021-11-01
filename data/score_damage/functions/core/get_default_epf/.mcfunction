@@ -28,10 +28,10 @@
         execute store result score $Temp ScoreDamageCore run data get storage score_damage: Protection[3][{id:"minecraft:protection"}].lvl
         scoreboard players operation $EPF ScoreDamageCore += $Temp ScoreDamageCore
 # 各種エンチャントの加算
-    execute if data storage score_damage: {DamageType:"Fire"} run function score_damage:core/get_default_epf/enchant/fire
-    execute if data storage score_damage: {DamageType:"Blast"} run function score_damage:core/get_default_epf/enchant/blast
-    execute if data storage score_damage: {DamageType:"Projectile"} run function score_damage:core/get_default_epf/enchant/projectile
-    execute if data storage score_damage: {DamageType:"Fall"} run function score_damage:core/get_default_epf/enchant/fall
+    execute if data storage score_damage: Argument{DamageType:"Fire"} run function score_damage:core/get_default_epf/enchant/fire
+    execute if data storage score_damage: Argument{DamageType:"Blast"} run function score_damage:core/get_default_epf/enchant/blast
+    execute if data storage score_damage: Argument{DamageType:"Projectile"} run function score_damage:core/get_default_epf/enchant/projectile
+    execute if data storage score_damage: Argument{DamageType:"Fall"} run function score_damage:core/get_default_epf/enchant/fall
 # リセット
     scoreboard players reset $Temp ScoreDamageCore
     data remove storage score_damage: Protection

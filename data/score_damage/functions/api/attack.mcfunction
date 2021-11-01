@@ -25,11 +25,11 @@
     #declare team Null
 
 # 引数チェック
-    execute unless data storage score_damage: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at score_damage:api/attack","color":"white"}]
-    execute unless data storage score_damage: EPF run data modify storage score_damage: EPF set value -1
-    execute unless data storage score_damage: DamageType run data modify storage score_damage: DamageType set value "None"
-    execute unless data storage score_damage: DisableParticle run data modify storage score_damage: DisableParticle set value 0b
-    execute unless data storage score_damage: BypassArmor run data modify storage score_damage: BypassArmor set value 0b
-    execute unless data storage score_damage: BypassResistance run data modify storage score_damage: BypassResistance set value 0b
+    execute unless data storage score_damage: Argument.Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at score_damage:api/attack","color":"white"}]
+    execute unless data storage score_damage: Argument.EPF run data modify storage score_damage: Argument.EPF set value -1
+    execute unless data storage score_damage: Argument.DamageType run data modify storage score_damage: Argument.DamageType set value "None"
+    execute unless data storage score_damage: Argument.DisableParticle run data modify storage score_damage: Argument.DisableParticle set value 0b
+    execute unless data storage score_damage: Argument.BypassArmor run data modify storage score_damage: Argument.BypassArmor set value 0b
+    execute unless data storage score_damage: Argument.BypassResistance run data modify storage score_damage: Argument.BypassResistance set value 0b
 # Healthを持つEntityであれば実行
-    execute if data storage score_damage: Damage if entity @s[team=!Null] run function score_damage:core/attack
+    execute if data storage score_damage: Argument.Damage if entity @s[team=!Null] run function score_damage:core/attack

@@ -14,7 +14,7 @@
     #declare score_holder $Resistance
 
 # 引数データをコピー
-    execute store result score $Damage ScoreDamageCore run data get storage score_damage: Damage 100
+    execute store result score $Damage ScoreDamageCore run data get storage score_damage: Argument.Damage 100
 # 計算に必要な値を取得
     function score_damage:core/get_status
 # 与えるダメージの計算

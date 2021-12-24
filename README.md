@@ -29,7 +29,7 @@
 |       Argument.DamageType |   x   | [DamageType](#DamageType) | ダメージの種類<br>この引数は上記EPFの値が0以上でない場合に対象のエンチャントを自動参照するために利用されます                                                                                                                      |  `"None"`  |
 |      Argument.BypassArmor |   x   |          boolean          | 防具による軽減を無視するか否か                                                                                                                                                                                                    |  `false`   |
 | Argument.BypassResistance |   x   |          boolean          | 耐性エフェクトによる軽減を無視するか否か                                                                                                                                                                                          |  `false`   |
-|  Argument.DisableParticle |   x   |          boolean          | ダメージを与えた際のパーティクルを無効化するか否か                                                                                                                                                                                      |  `false`   |
+|  Argument.DisableParticle |   x   |          boolean          | ダメージを与えた際のパーティクルを無効化するか否か                                                                                                                                                                                |  `false`   |
 
 #### DamageType
 * `"None"`

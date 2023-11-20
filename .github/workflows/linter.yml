@@ -14,6 +14,3 @@ jobs:
 
       - name: lint
         uses: ChenCMD/datapack-linter@v2
-        with:
-          ignoreLintPathPattern: |
-            score_damage:core/get_status

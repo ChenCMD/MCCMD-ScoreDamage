@@ -10,6 +10,7 @@
 
 #> Private
 # @internal
+    #declare objective ScoreToHealth
     #declare team null
     #declare score_holder $2
     #declare score_holder $3

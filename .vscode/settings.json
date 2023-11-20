@@ -1,4 +1,6 @@
 {
+    "datapack.env.cmdVersion": "1.19",
+    "datapack.env.dataVersion": "1.19",
     "datapack.lint.blockStateBracketSpacing": {
         "inside": 0
     },

@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: lint
-        uses: ChenCMD/datapack-linter@v1
+        uses: ChenCMD/datapack-linter@v2
         with:
           ignoreLintPathPattern: |
             score_damage:core/get_status
